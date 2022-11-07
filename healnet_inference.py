@@ -6,13 +6,16 @@ from datetime import datetime
 from tqdm.auto import tqdm
 from tensorflow.keras.utils import array_to_img, img_to_array
 import numpy as np
+import os
+
+desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 
 model_path = "./HealNet_cls.h5"
 densenet_cluster_stage = {0:"Proliferation/Maturation",
                           1:"Hemostasis",
                           2:"Inflammatory"}
-root_images = "./Wound_2" # change this to real folder
-prob_table_path = "./prob_table.csv"
+root_images = f"{desktop}/Porcine_Exp_Davis" # change this to real folder
+prob_table_path = f"{desktop}/HealNet/prob_table.csv"
 
 model = keras.models.load_model(model_path)
 image_paths = glob.glob(f"{root_images}/**/*.jpg", recursive=True)
