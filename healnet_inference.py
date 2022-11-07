@@ -15,7 +15,7 @@ densenet_cluster_stage = {0:"Proliferation/Maturation",
                           1:"Hemostasis",
                           2:"Inflammatory"}
 root_images = f"{desktop}/Porcine_Exp_Davis" # change this to real folder
-prob_table_path = f"{desktop}/HealNet/prob_table.csv"
+prob_table_path = f"{desktop}/HealNet-Inference/prob_table.csv"
 
 model = keras.models.load_model(model_path)
 image_paths = glob.glob(f"{root_images}/**/*.jpg", recursive=True)
