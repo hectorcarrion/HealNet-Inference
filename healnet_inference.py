@@ -7,6 +7,11 @@ from tqdm.auto import tqdm
 from tensorflow.keras.utils import array_to_img, img_to_array
 import numpy as np
 import os
+import subprocess
+
+#Git Pull to current directory
+subprocess.call("git pull",shell=True )
+
 
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 
@@ -49,3 +54,8 @@ else:
     print(f"No new images found in {root_images}")
 print("Running again in 1 hour.")
 
+# Git Push to repo
+subprocess.call("git status",shell=True )
+subprocess.call("git add .",shell=True )
+subprocess.call("git commit -am \"autocommit\"",shell=True )
+subprocess.call("git push",shell=True )
