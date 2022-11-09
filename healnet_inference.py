@@ -20,13 +20,9 @@ try: # Try Git Pull to current directory
 except:
     print("No internet connectionm, cannot pull.")
 
-
-
-
-
-densenet_cluster_stage = {0:"Proliferation/Maturation",
-                          1:"Hemostasis",
-                          2:"Inflammatory"}
+stage_cls = {"Proliferation/Maturation":0,
+             "Hemostasis":1,
+             "Inflammatory":2}
 root_images = f"{desktop}/Porcine_Exp_Davis" # change this to real folder
 prob_table_path = f"{desktop}/HealNet-Inference/prob_table.csv"
 
@@ -52,7 +48,10 @@ for image in tqdm(image_paths):
         pred = model.predict(image_data, verbose=0)
         pred = pred.flatten()
         time = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-        prob_table.loc[len(prob_table)] = [image, time, pred[1], pred[2], pred[0]]
+        prob_table.loc[len(prob_table)] = [image, time,
+                                           pred[stage_cls["Hemostasis"]],
+                                           pred[stage_cls["Inflammatory"]],
+                                           pred[stage_cls["Proliferation/Maturation"]]]
         processed_ctr += 1
 
 prob_table.to_csv(prob_table_path, index=False)
