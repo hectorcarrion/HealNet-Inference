@@ -20,8 +20,8 @@ except:
 
 
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
-
-model_path = "./HealNet_cls.h5"
+print(desktop)
+model_path = "HealNet_cls.h5"
 densenet_cluster_stage = {0:"Proliferation/Maturation",
                           1:"Hemostasis",
                           2:"Inflammatory"}
