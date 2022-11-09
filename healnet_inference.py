@@ -8,9 +8,15 @@ from tensorflow.keras.utils import array_to_img, img_to_array
 import numpy as np
 import os
 import subprocess
+import urllib.request
 
-#Git Pull to current directory
-subprocess.call("git pull",shell=True )
+try: # Try Git Pull to current directory
+    urllib.request.urlopen("https://github.com/hectorcarrion/HealNet-Inference")
+    subprocess.call("git pull",shell=True )
+except:
+    print("No internet connectionm, cannot pull.")
+
+
 
 
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
@@ -54,8 +60,12 @@ else:
     print(f"No new images found in {root_images}")
 print("Running again in 1 hour.")
 
-# Git Push to repo
-subprocess.call("git status",shell=True )
-subprocess.call("git add .",shell=True )
-subprocess.call("git commit -am \"autocommit\"",shell=True )
-subprocess.call("git push",shell=True )
+try:
+    # Try Git Push to repo
+    urllib.request.urlopen("https://github.com/hectorcarrion/HealNet-Inference")
+    subprocess.call("git status",shell=True )
+    subprocess.call("git add .",shell=True )
+    subprocess.call("git commit -am \"autocommit\"",shell=True )
+    subprocess.call("git push",shell=True )
+except:
+    print("No internet connection, cannot push.")
