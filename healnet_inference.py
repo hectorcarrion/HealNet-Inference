@@ -10,21 +10,20 @@ import os
 import subprocess
 import urllib.request
 
+desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
+dir_ =  os.path.join(desktop, "HealNet-Inference")
+model_path = dir_ + "\\" + "HealNet_cls.h5"
+
 try: # Try Git Pull to current directory
     urllib.request.urlopen("https://github.com/hectorcarrion/HealNet-Inference")
-    subprocess.call("git pull",shell=True )
+    subprocess.call("git pull",shell=True, cwd = dir_ )
 except:
     print("No internet connectionm, cannot pull.")
 
 
 
 
-desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
-print(desktop)
-dir_ =  os.path.join(desktop, "HealNet-Inference")
-print(dir_)
-model_path = dir_ + "\\" + "HealNet_cls.h5"
-print(dir_ + "\\" + "HealNet_cls.h5")
+
 densenet_cluster_stage = {0:"Proliferation/Maturation",
                           1:"Hemostasis",
                           2:"Inflammatory"}
@@ -66,9 +65,9 @@ print("Running again in 1 hour.")
 try:
     # Try Git Push to repo
     urllib.request.urlopen("https://github.com/hectorcarrion/HealNet-Inference")
-    subprocess.call("git status",shell=True )
-    subprocess.call("git add .",shell=True )
-    subprocess.call("git commit -am \"autocommit\"",shell=True )
-    subprocess.call("git push",shell=True )
+    subprocess.call("git status",shell=True, cwd = dir_  )
+    subprocess.call("git add .",shell=True, cwd = dir_  )
+    subprocess.call("git commit -am \"autocommit\"",shell=True, cwd = dir_  )
+    subprocess.call("git push",shell=True, cwd = dir_  )
 except:
     print("No internet connection, cannot push.")
