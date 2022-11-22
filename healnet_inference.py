@@ -43,19 +43,19 @@ for image in tqdm(image_paths):
     if image not in list(prob_table["Image"]):
         try:
             resized_im = Image.open(image).resize((128,128))
+            image_data = img_to_array(resized_im)
+            #image_data = densenet_preprocess(image_data) # densenet hardcoded!
+            image_data = np.expand_dims(image_data, axis=0) # adds batch dim
+            pred = model.predict(image_data, verbose=0)
+            pred = pred.flatten()
+            time = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+            prob_table.loc[len(prob_table)] = [image, time,
+                                               pred[stage_cls["Hemostasis"]],
+                                               pred[stage_cls["Inflammatory"]],
+                                               pred[stage_cls["Proliferation/Maturation"]]]
+            processed_ctr += 1
         except:
-            print("Unable to open image. Continuing...")
-        image_data = img_to_array(resized_im)
-        #image_data = densenet_preprocess(image_data) # densenet hardcoded!
-        image_data = np.expand_dims(image_data, axis=0) # adds batch dim
-        pred = model.predict(image_data, verbose=0)
-        pred = pred.flatten()
-        time = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-        prob_table.loc[len(prob_table)] = [image, time,
-                                           pred[stage_cls["Hemostasis"]],
-                                           pred[stage_cls["Inflammatory"]],
-                                           pred[stage_cls["Proliferation/Maturation"]]]
-        processed_ctr += 1
+            print(f"Unable to open {image} (check if corrupted). Skipping...")
 
 prob_table.to_csv(prob_table_path, index=False)
 if processed_ctr:
