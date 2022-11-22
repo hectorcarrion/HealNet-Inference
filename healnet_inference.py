@@ -41,7 +41,10 @@ except:
 processed_ctr = 0
 for image in tqdm(image_paths):
     if image not in list(prob_table["Image"]):
-        resized_im = Image.open(image).resize((128,128))
+        try:
+            resized_im = Image.open(image).resize((128,128))
+        except:
+            print("Unable to open image. Continuing...")
         image_data = img_to_array(resized_im)
         #image_data = densenet_preprocess(image_data) # densenet hardcoded!
         image_data = np.expand_dims(image_data, axis=0) # adds batch dim
