@@ -9,6 +9,7 @@ import numpy as np
 import os
 import subprocess
 import urllib.request
+import pathlib as Path
 
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 dir_ =  os.path.join(desktop, "HealNet-Inference")
@@ -27,7 +28,10 @@ root_images = f"{desktop}/Porcine_Exp_Davis" # change this to real folder
 prob_table_path = f"{desktop}/HealNet-Inference/prob_table.csv"
 
 model = keras.models.load_model(model_path)
-image_paths = glob.glob(f"{root_images}/**/*.jpg", recursive=True)
+
+# fixing windows path bug as per https://stackoverflow.com/questions/5629242/getting-every-file-in-a-windows-directory
+glob_path = Path(f"{root_images}/**/*.jpg")
+image_paths = glob.glob(glob_path, recursive=True)
 
 try:
     prob_table = pd.read_csv(prob_table_path)
