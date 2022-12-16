@@ -1,15 +1,18 @@
 from tensorflow import keras
 from PIL import Image
 import pandas as pd
-import glob
 from datetime import datetime
 from tqdm.auto import tqdm
 from tensorflow.keras.utils import array_to_img, img_to_array
 import numpy as np
 import os
+from pathlib import Path
 import subprocess
 import urllib.request
+<<<<<<< HEAD
 # import pathlib as Path
+=======
+>>>>>>> 26c2ffea3e9b53131569e6639b5173203eab2aec
 
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 dir_ =  os.path.join(desktop, "HealNet-Inference")
@@ -24,16 +27,23 @@ except:
 stage_cls = {"Proliferation/Maturation":0,
              "Hemostasis":1,
              "Inflammatory":2}
-root_images = f"{desktop}/Porcine_Exp_Davis" # change this to real folder
+
+# Handles windows specific paths well
+root_images = Path(f"{desktop}\Porcine_Exp_Davis")
 prob_table_path = f"{desktop}/HealNet-Inference/prob_table.csv"
 
 model = keras.models.load_model(model_path)
 
 image_paths = glob.glob(f"{root_images}/**/*.jpg",recursive=True )
 # fixing windows path bug as per https://stackoverflow.com/questions/5629242/getting-every-file-in-a-windows-directory
+<<<<<<< HEAD
 # glob_path = Path(f"{root_images}/**/*.jpg")
 # image_paths = glob.glob(glob_path, recursive=True)
 
+=======
+#image_paths = glob.glob(f"{root_images}/**/*.jpg")
+image_paths = list(root_images.glob("**/*.jpg"))
+>>>>>>> 26c2ffea3e9b53131569e6639b5173203eab2aec
 
 try:
     prob_table = pd.read_csv(prob_table_path)
@@ -46,7 +56,7 @@ except:
 
 processed_ctr = 0
 for image in tqdm(image_paths):
-    if image not in list(prob_table["Image"]):
+    if str(image) not in list(prob_table["Image"]):
         try:
             resized_im = Image.open(image).resize((128,128))
             image_data = img_to_array(resized_im)
@@ -55,7 +65,7 @@ for image in tqdm(image_paths):
             pred = model.predict(image_data, verbose=0)
             pred = pred.flatten()
             time = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-            prob_table.loc[len(prob_table)] = [image, time,
+            prob_table.loc[len(prob_table)] = [str(image), time,
                                                pred[stage_cls["Hemostasis"]],
                                                pred[stage_cls["Inflammatory"]],
                                                pred[stage_cls["Proliferation/Maturation"]]]
@@ -64,6 +74,7 @@ for image in tqdm(image_paths):
             print(f"Unable to open {image} (check if corrupted). Skipping...")
 
 prob_table.to_csv(prob_table_path, index=False)
+
 if processed_ctr:
     print(f"Added {processed_ctr} new predictions to {prob_table_path}")
 else:
