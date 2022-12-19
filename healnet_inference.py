@@ -9,14 +9,33 @@ import os
 from pathlib import Path
 import subprocess
 import urllib.request
+import cv2
 
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 dir_ =  os.path.join(desktop, "HealNet-Inference")
 model_path = dir_ + "\\" + "HealNet_cls.h5"
 
+def get_blur(image_path_obj):
+
+    image_path = str(image_path_obj)
+    
+    # Load the image and convert it to grayscale
+    image = cv2.imread(image_path)
+    gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
+    # Compute the Laplacian of the image and take the absolute value
+    lap = cv2.Laplacian(gray, cv2.CV_64F)
+    lap = cv2.convertScaleAbs(lap)
+
+    # Compute the standard deviation of the Laplacian values
+    std_dev = lap.std()
+
+    # Return the blur level as a value between 0 and 1
+    return std_dev / 255
+
 try: # Try Git Pull to current directory
     urllib.request.urlopen("https://github.com/hectorcarrion/HealNet-Inference")
-    subprocess.call("git pull",shell=True, cwd = dir_ )
+    subprocess.call("git pull", shell=True, cwd=dir_)
 except:
     print("No internet connectionm, cannot pull.")
 
@@ -30,15 +49,20 @@ prob_table_path = f"{desktop}/HealNet-Inference/prob_table.csv"
 
 model = keras.models.load_model(model_path)
 
-# fixing windows path bug as per https://stackoverflow.com/questions/5629242/getting-every-file-in-a-windows-directory
-#image_paths = glob.glob(f"{root_images}/**/*.jpg")
+# fixing windows path bug as per 
+# https://stackoverflow.com/questions/5629242/getting-every-file-in-a-windows-directory
 image_paths = list(root_images.glob("**/*.jpg"))
 
 try:
     prob_table = pd.read_csv(prob_table_path)
+    if len(prob_table.columns) >= 6: # change if needed
+        save_blur = True
+    else:
+        save_blur = False
 except:
-    headers = {"Image":[], "Time Processed":[], "Hemostasis":[],
-                  "Inflammation":[], "Proliferation/Maturation":[]}
+    headers = {"Image":[], "Time Processed":[], "Blur":[], "Hemostasis":[],
+               "Inflammation":[], "Proliferation/Maturation":[]}
+    save_blur = True
     table = pd.DataFrame.from_dict(headers)
     table.to_csv(prob_table_path, index=False)
     prob_table = pd.read_csv(prob_table_path)
@@ -54,10 +78,17 @@ for image in tqdm(image_paths):
             pred = model.predict(image_data, verbose=0)
             pred = pred.flatten()
             time = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-            prob_table.loc[len(prob_table)] = [str(image), time,
-                                               pred[stage_cls["Hemostasis"]],
-                                               pred[stage_cls["Inflammatory"]],
-                                               pred[stage_cls["Proliferation/Maturation"]]]
+            if save_blur:
+                blur = get_blur(image)
+                prob_table.loc[len(prob_table)] = [str(image), time, blur,
+                                                   pred[stage_cls["Hemostasis"]],
+                                                   pred[stage_cls["Inflammatory"]],
+                                                   pred[stage_cls["Proliferation/Maturation"]]]
+            else:
+                prob_table.loc[len(prob_table)] = [str(image), time,
+                                                   pred[stage_cls["Hemostasis"]],
+                                                   pred[stage_cls["Inflammatory"]],
+                                                   pred[stage_cls["Proliferation/Maturation"]]]
             processed_ctr += 1
         except:
             print(f"Unable to open {image} (check if corrupted). Skipping...")
@@ -73,9 +104,9 @@ print("Running again in 1 hour.")
 try:
     # Try Git Push to repo
     urllib.request.urlopen("https://github.com/hectorcarrion/HealNet-Inference")
-    subprocess.call("git status",shell=True, cwd = dir_  )
-    subprocess.call("git add .",shell=True, cwd = dir_  )
+    subprocess.call("git status", shell=True, cwd=dir_)
+    subprocess.call("git add .", shell=True, cwd=dir_)
     subprocess.call("git commit -am \"autocommit\"",shell=True, cwd = dir_  )
-    subprocess.call("git push",shell=True, cwd = dir_  )
+    subprocess.call("git push", shell=True, cwd=dir_)
 except:
     print("No internet connection, cannot push.")
