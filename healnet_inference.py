@@ -38,6 +38,9 @@ try: # Try Git Pull to current directory
 except:
     print("No internet connectionm, cannot pull.")
 
+# Read from file in future
+avg_dv = np.array([108.16076384,  61.49104917,  55.44175686])
+color_correct = True
 stage_cls = {"Proliferation/Maturation":0,
              "Hemostasis":1,
              "Inflammatory":2}
@@ -74,6 +77,10 @@ for image in tqdm(image_paths):
         try:
             resized_im = Image.open(image).resize((128,128))
             image_data = img_to_array(resized_im)
+            if color_correct:
+                img_avg = image_data.mean(axis=(0,1))
+                image_data = np.clip(image + 
+                                     np.expand_dims(avg_dv - img_avg, axis=0), 0, 255).astype(int)
             #image_data = densenet_preprocess(image_data) # densenet hardcoded!
             image_data = np.expand_dims(image_data, axis=0) # adds batch dim
             pred = model.predict(image_data, verbose=0)
