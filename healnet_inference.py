@@ -79,7 +79,7 @@ for image in tqdm(image_paths):
             image_data = img_to_array(resized_im)
             if color_correct:
                 img_avg = image_data.mean(axis=(0,1))
-                image_data = np.clip(image + 
+                image_data = np.clip(image_data + 
                                      np.expand_dims(avg_dv - img_avg, axis=0), 0, 255).astype(int)
             #image_data = densenet_preprocess(image_data) # densenet hardcoded!
             image_data = np.expand_dims(image_data, axis=0) # adds batch dim
