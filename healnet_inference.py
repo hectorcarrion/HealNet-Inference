@@ -9,7 +9,6 @@ import os
 from pathlib import Path
 import subprocess
 import urllib.request
-import cv2
 
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 dir_ =  os.path.join(desktop, "HealNet-Inference")
@@ -57,12 +56,14 @@ try:
     prob_table = pd.read_csv(prob_table_path)
     if len(prob_table.columns) >= 6: # change if needed
         save_blur = True
+        import cv2
     else:
         save_blur = False
 except:
     headers = {"Image":[], "Time Processed":[], "Blur":[], "Hemostasis":[],
                "Inflammation":[], "Proliferation/Maturation":[]}
     save_blur = True
+    import cv2
     table = pd.DataFrame.from_dict(headers)
     table.to_csv(prob_table_path, index=False)
     prob_table = pd.read_csv(prob_table_path)
