@@ -9,6 +9,9 @@ import os
 from pathlib import Path
 import subprocess
 import urllib.request
+from skimage import color as skcolor
+from skimage import filters as skfilters
+import cv2
 
 desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
 dir_ =  os.path.join(desktop, "HealNet-Inference")
@@ -32,6 +35,32 @@ def get_blur(image_path_obj):
     # Return the blur level as a value between 0 and 1
     return std_dev / 255
 
+def aggregate(probs, stage_idx):
+
+    hemo_total = 0
+    inf_total = 0
+    prolif_total = 0
+    matu_total = 0
+
+    for prob in probs:
+        hemo = prob[stage_idx["Hemostasis"]]
+        inf = prob[stage_idx["Inflammatory"]]
+        prolif = prob[stage_idx["Proliferation"]]
+        matu = prob[stage_idx["Maturation"]]
+
+        hemo_total += hemo
+        inf_total += inf
+        prolif_total += prolif
+        matu_total += matu
+
+    hemo_avg = hemo_total / len(probs)
+    inf_avg = inf_total / len(probs)
+    prolif_avg = prolif_total / len(probs)
+    matu_avg = matu_total / len(probs)
+
+    return hemo_avg, inf_avg, prolif_avg, matu_avg
+
+
 try: # Try Git Pull to current directory
     urllib.request.urlopen("https://github.com/hectorcarrion/HealNet-Inference")
     subprocess.call("git pull", shell=True, cwd=dir_)
@@ -41,9 +70,12 @@ except:
 # Read from file in future
 avg_dv = np.array([108.16076384,  61.49104917,  55.44175686])
 color_correct = True
-stage_cls = {"Proliferation/Maturation":0,
+center = True
+max_noise_level = 10000
+stage_idx = {"Maturation":0,
              "Hemostasis":1,
-             "Inflammatory":2}
+             "Inflammatory":2,
+             "Proliferation":3}
 
 # Handles windows specific paths well
 root_images = Path(f"{desktop}\Porcine_Exp_Davis")
@@ -57,16 +89,11 @@ image_paths = list(root_images.glob("**/*.jpg"))
 
 try:
     prob_table = pd.read_csv(prob_table_path)
-    if len(prob_table.columns) >= 6: # change if needed
-        save_blur = True
-        import cv2
-    else:
-        save_blur = False
+
 except:
-    headers = {"Image":[], "Time Processed":[], "Blur":[], "Hemostasis":[],
-               "Inflammation":[], "Proliferation/Maturation":[]}
-    save_blur = True
-    import cv2
+    headers = {"Image":[], "Time Processed":[], "Blur":[], "Patches": [], "Hemostasis":[],
+               "Inflammation":[], "Proliferation":[], "Maturation":[]}
+
     table = pd.DataFrame.from_dict(headers)
     table.to_csv(prob_table_path, index=False)
     prob_table = pd.read_csv(prob_table_path)
@@ -75,28 +102,45 @@ processed_ctr = 0
 for image in tqdm(image_paths):
     if str(image) not in list(prob_table["Image"]):
         try:
-            resized_im = Image.open(image).resize((128,128))
-            image_data = img_to_array(resized_im)
+            blur = get_blur(image)
+            device_image = img_to_array(Image.open(image))
+
             if color_correct:
-                img_avg = image_data.mean(axis=(0,1))
-                image_data = np.clip(image_data + 
-                                     np.expand_dims(avg_dv - img_avg, axis=0), 0, 255).astype(int)
-            #image_data = densenet_preprocess(image_data) # densenet hardcoded!
-            image_data = np.expand_dims(image_data, axis=0) # adds batch dim
-            pred = model.predict(image_data, verbose=0)
-            pred = pred.flatten()
+                img_avg = device_image.mean(axis=(0,1))
+                device_image = np.clip(device_image + np.expand_dims(avg_dv - img_avg, axis=0), 0, 255).astype(int)
+
+            if center:
+                device_image = device_image[1000:4000, 1500:5500]
+
+            gray = skcolor.rgb2gray(device_image/255)
+            blurred_image = skfilters.gaussian(gray, sigma=1.0)
+            thresh = blurred_image > 0.5
+
+            max_y, max_x, _ = device_image.shape
+            ys = np.random.randint(0, max_y-crop_size, 5)
+            xs = np.random.randint(0, max_x-crop_size, 5)
+            # Max tries is 5x5 or 25
+            tries = np.array(np.meshgrid(ys, xs)).T.reshape(-1, 2)
+
+            preds = []
+            for y, x in tries:
+                # good crop
+                if np.count_nonzero(thresh[y:y+crop_size, x:x+crop_size]) < max_noise_level:
+                    patch = Image.fromarray(device_image[y:y+crop_size, x:x+crop_size].astype(np.uint8))
+                    patch = patch.resize((128,128))
+                    image_data = img_to_array(patch)
+
+                    #image_data = densenet_preprocess(image_data) # densenet hardcoded!
+                    image_data = np.expand_dims(image_data, axis=0) # adds batch dim
+                    pred = model.predict(image_data, verbose=0)
+                    pred = pred.flatten()
+                    preds.append(pred)
+
+            hemo, infl, prol, matu = aggregate(preds, stage_idx)
+
             time = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-            if save_blur:
-                blur = get_blur(image)
-                prob_table.loc[len(prob_table)] = [str(image), time, blur,
-                                                   pred[stage_cls["Hemostasis"]],
-                                                   pred[stage_cls["Inflammatory"]],
-                                                   pred[stage_cls["Proliferation/Maturation"]]]
-            else:
-                prob_table.loc[len(prob_table)] = [str(image), time,
-                                                   pred[stage_cls["Hemostasis"]],
-                                                   pred[stage_cls["Inflammatory"]],
-                                                   pred[stage_cls["Proliferation/Maturation"]]]
+            prob_table.loc[len(prob_table)] = [str(image), time, blur, len(preds),
+                                               hemo, infl, prol, matu]
             processed_ctr += 1
         except:
             print(f"Unable to open {image} (check if corrupted). Skipping...")
