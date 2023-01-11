@@ -182,6 +182,7 @@ stage_idx = {"Maturation":0,
              "Hemostasis":1,
              "Inflammatory":2,
              "Proliferation":3}
+crop_size = 1024
 
 # Handles windows specific paths well
 root_images = Path(f"{desktop}\Porcine_Exp_Davis")
@@ -207,49 +208,49 @@ except:
 processed_ctr = 0
 for image in tqdm(image_paths):
     if str(image) not in list(prob_table["Image"]):
-        try:
-            blur = get_blur(image)
-            device_image = img_to_array(Image.open(image))
+        blur = get_blur(image)
+        device_image = img_to_array(Image.open(image))
 
-            if color_correct:
-                img_avg = device_image.mean(axis=(0,1))
-                device_image = np.clip(device_image + np.expand_dims(avg_dv - img_avg, axis=0), 0, 255).astype(int)
+        if color_correct:
+            img_avg = device_image.mean(axis=(0,1))
+            device_image = np.clip(device_image + np.expand_dims(avg_dv - img_avg, axis=0), 0, 255).astype(int)
 
-            if center:
-                device_image = device_image[1000:4000, 1500:5500]
+        if center:
+            device_image = device_image[1000:4000, 1500:5500]
 
-            gray = skcolor.rgb2gray(device_image/255)
-            blurred_image = skfilters.gaussian(gray, sigma=1.0)
-            thresh = blurred_image > 0.5
+        gray = skcolor.rgb2gray(device_image/255)
+        blurred_image = skfilters.gaussian(gray, sigma=1.0)
+        thresh = blurred_image > 0.5
 
-            max_y, max_x, _ = device_image.shape
-            ys = np.random.randint(0, max_y-crop_size, 5)
-            xs = np.random.randint(0, max_x-crop_size, 5)
-            # Max tries is 5x5 or 25
-            tries = np.array(np.meshgrid(ys, xs)).T.reshape(-1, 2)
+        max_y, max_x, _ = device_image.shape
+        ys = np.random.randint(0, max_y-crop_size, 5)
+        xs = np.random.randint(0, max_x-crop_size, 5)
+        # Max tries is 5x5 or 25
+        tries = np.array(np.meshgrid(ys, xs)).T.reshape(-1, 2)
 
-            preds = []
-            for y, x in tries:
-                # good crop
-                if np.count_nonzero(thresh[y:y+crop_size, x:x+crop_size]) < max_noise_level:
-                    patch = Image.fromarray(device_image[y:y+crop_size, x:x+crop_size].astype(np.uint8))
-                    patch = patch.resize((128,128))
-                    image_data = img_to_array(patch)
+        preds = []
+        for y, x in tries:
+            # good crop
+            if np.count_nonzero(thresh[y:y+crop_size, x:x+crop_size]) < max_noise_level:
+                patch = Image.fromarray(device_image[y:y+crop_size, x:x+crop_size].astype(np.uint8))
+                patch = patch.resize((128,128))
+                image_data = img_to_array(patch)
 
-                    #image_data = densenet_preprocess(image_data) # densenet hardcoded!
-                    image_data = np.expand_dims(image_data, axis=0) # adds batch dim
-                    pred = model.predict(image_data, verbose=0)
-                    pred = pred.flatten()
-                    preds.append(pred)
+                #image_data = densenet_preprocess(image_data) # densenet hardcoded!
+                image_data = np.expand_dims(image_data, axis=0) # adds batch dim
+                pred = model.predict(image_data, verbose=0)
+                pred = pred.flatten()
+                preds.append(pred)
 
-            hemo, infl, prol, matu = aggregate(preds, stage_idx)
+        hemo, infl, prol, matu = aggregate(preds, stage_idx)
 
-            time = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-            prob_table.loc[len(prob_table)] = [str(image), time, blur, len(preds),
-                                               hemo, infl, prol, matu]
-            processed_ctr += 1
-        except:
-            print(f"Unable to open {image} (check if corrupted). Skipping...")
+        time = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+        prob_table.loc[len(prob_table)] = [str(image), time, blur, len(preds),
+                                           hemo, infl, prol, matu]
+        processed_ctr += 1
+        if processed_ctr == 10:
+            break
+        #print(f"Unable to open {image} (check if corrupted). Skipping...")
 
 prob_table.to_csv(prob_table_path, index=False)
 
