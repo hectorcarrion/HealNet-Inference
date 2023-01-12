@@ -167,11 +167,11 @@ def aggregate(probs, stage_idx):
     return hemo_avg, inf_avg, prolif_avg, matu_avg
 
 
-try: # Try Git Pull to current directory
-    urllib.request.urlopen("https://github.com/hectorcarrion/HealNet-Inference")
-    subprocess.call("git pull", shell=True, cwd=dir_)
-except:
-    print("No internet connectionm, cannot pull.")
+# try: # Try Git Pull to current directory
+    # urllib.request.urlopen("https://github.com/hectorcarrion/HealNet-Inference")
+    # subprocess.call("git pull", shell=True, cwd=dir_)
+# except:
+    # print("No internet connectionm, cannot pull.")
 
 # Read from file in future
 avg_dv = np.array([108.16076384,  61.49104917,  55.44175686])
@@ -264,8 +264,8 @@ try:
     # Try Git Push to repo
     urllib.request.urlopen("https://github.com/hectorcarrion/HealNet-Inference")
     subprocess.call("git status", shell=True, cwd=dir_)
-    subprocess.call("git add .", shell=True, cwd=dir_)
-    subprocess.call("git commit -am \"autocommit\"",shell=True, cwd = dir_  )
+    subprocess.call("git add prob_table.csv", shell=True, cwd=dir_)
+    subprocess.call("git commit -am \"windows autocommit\"",shell=True, cwd = dir_  )
     subprocess.call("git push", shell=True, cwd=dir_)
 except:
     print("No internet connection, cannot push.")
