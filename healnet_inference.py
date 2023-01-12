@@ -4,19 +4,41 @@ from PIL import Image
 import pandas as pd
 from datetime import datetime
 from tqdm.auto import tqdm
-from tensorflow.keras.utils import array_to_img, img_to_array
+from tensorflow.keras.utils import img_to_array
 import numpy as np
 import os
 from pathlib import Path
-import subprocess
-import urllib.request
 from skimage import color as skcolor
 from skimage import filters as skfilters
 import cv2
 
-desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
+# Constants
+avg_dv = np.array([108.16076384,  61.49104917,  55.44175686])
+color_correct = True
+center = True
+max_noise_level = 10000
+stage_idx = {"Maturation":0,
+             "Hemostasis":1,
+             "Inflammatory":2,
+             "Proliferation":3}
+crop_size = 1024
+
+if os.name == 'nt':
+    desktop = os.path.join(os.path.join(os.environ['USERPROFILE']), 'Desktop')
+    root_images = Path(f"{desktop}\Porcine_Exp_Davis")
+    # fixing windows path bug as per 
+    # https://stackoverflow.com/questions/5629242/getting-every-file-in-a-windows-directory
+    image_paths = list(root_images.glob("**/*.jpg"))
+else:
+    desktop = os.path.join(os.path.join(os.path.expanduser('~')), 'Desktop')
+    root_images = Path(f"{desktop}/Porcine_Exp_Davis")
+    # fixing windows path bug as per 
+    # https://stackoverflow.com/questions/5629242/getting-every-file-in-a-windows-directory
+    image_paths = list(root_images.glob("**/*.jpg"))
+
 dir_ =  os.path.join(desktop, "HealNet-Inference")
-model_path = dir_ + "\\" + "HealNet_cls.h5"
+model_path = os.path.join(dir_, "HealNet_cls.h5")
+prob_table_path = f"{desktop}/HealNet-Inference/prob_table.csv"
 
 class GaussianBlur(tf.keras.__internal__.layers.BaseImageAugmentationLayer):
     """Applies a Gaussian Blur with random sigma to an image.
@@ -166,34 +188,6 @@ def aggregate(probs, stage_idx):
 
     return hemo_avg, inf_avg, prolif_avg, matu_avg
 
-
-# try: # Try Git Pull to current directory
-    # urllib.request.urlopen("https://github.com/hectorcarrion/HealNet-Inference")
-    # subprocess.call("git pull", shell=True, cwd=dir_)
-# except:
-    # print("No internet connectionm, cannot pull.")
-
-# Read from file in future
-avg_dv = np.array([108.16076384,  61.49104917,  55.44175686])
-color_correct = True
-center = True
-max_noise_level = 10000
-stage_idx = {"Maturation":0,
-             "Hemostasis":1,
-             "Inflammatory":2,
-             "Proliferation":3}
-crop_size = 1024
-
-# Handles windows specific paths well
-root_images = Path(f"{desktop}\Porcine_Exp_Davis")
-prob_table_path = f"{desktop}/HealNet-Inference/prob_table.csv"
-
-model = keras.models.load_model(model_path, custom_objects={"GaussianBlur": GaussianBlur})
-
-# fixing windows path bug as per 
-# https://stackoverflow.com/questions/5629242/getting-every-file-in-a-windows-directory
-image_paths = list(root_images.glob("**/*.jpg"))
-
 try:
     prob_table = pd.read_csv(prob_table_path)
 
@@ -205,6 +199,7 @@ except:
     table.to_csv(prob_table_path, index=False)
     prob_table = pd.read_csv(prob_table_path)
 
+model = keras.models.load_model(model_path, custom_objects={"GaussianBlur": GaussianBlur})
 processed_ctr = 0
 for image in tqdm(image_paths):
     if str(image) not in list(prob_table["Image"]):
@@ -255,17 +250,9 @@ for image in tqdm(image_paths):
 prob_table.to_csv(prob_table_path, index=False)
 
 if processed_ctr:
+    print()
     print(f"Added {processed_ctr} new predictions to {prob_table_path}")
 else:
+    print()
     print(f"No new images found in {root_images}")
-print("Running again in 1 hour.")
-
-try:
-    # Try Git Push to repo
-    urllib.request.urlopen("https://github.com/hectorcarrion/HealNet-Inference")
-    subprocess.call("git status", shell=True, cwd=dir_)
-    subprocess.call("git add prob_table.csv", shell=True, cwd=dir_)
-    subprocess.call("git commit -am \"windows autocommit\"",shell=True, cwd = dir_  )
-    subprocess.call("git push", shell=True, cwd=dir_)
-except:
-    print("No internet connection, cannot push.")
+    
