@@ -5281,3 +5281,27 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/66 [00:00<?, ?it/s] 18%|█▊        | 12/66 [00:10<00:48,  1.12it/s] 20%|█▉        | 13/66 [00:17<01:21,  1.53s/it] 21%|██        | 14/66 [00:24<01:55,  2.22s/it] 23%|██▎       | 15/66 [00:31<02:29,  2.94s/it] 24%|██▍       | 16/66 [00:37<03:01,  3.64s/it] 26%|██▌       | 17/66 [00:45<03:41,  4.52s/it] 27%|██▋       | 18/66 [00:52<04:04,  5.09s/it] 29%|██▉       | 19/66 [01:00<04:31,  5.78s/it] 30%|███       | 20/66 [01:07<04:36,  6.01s/it] 32%|███▏      | 21/66 [01:13<04:39,  6.21s/it] 33%|███▎      | 22/66 [01:22<04:57,  6.77s/it] 85%|████████▍ | 56/66 [01:29<00:06,  1.48it/s] 86%|████████▋ | 57/66 [01:36<00:08,  1.11it/s] 88%|████████▊ | 58/66 [01:46<00:10,  1.35s/it] 89%|████████▉ | 59/66 [01:53<00:12,  1.72s/it] 91%|█████████ | 60/66 [01:59<00:12,  2.16s/it] 92%|█████████▏| 61/66 [02:06<00:13,  2.67s/it] 94%|█████████▍| 62/66 [02:14<00:13,  3.42s/it] 95%|█████████▌| 63/66 [02:21<00:12,  4.04s/it] 97%|█████████▋| 64/66 [02:28<00:09,  4.54s/it] 98%|█████████▊| 65/66 [02:39<00:05,  5.85s/it]100%|██████████| 66/66 [02:46<00:00,  6.15s/it]100%|██████████| 66/66 [02:46<00:00,  2.52s/it]
 
 Added 22 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
+[main 0ae2b4e] Table Autocommit
+ 2 files changed, 57 insertions(+), 11 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   096c91d..0ae2b4e  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-15 01:35:02.675916: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-15 01:35:09.443318: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/66 [00:00<?, ?it/s]100%|██████████| 66/66 [00:00<00:00, 4111.64it/s]
+
+No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
