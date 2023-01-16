@@ -6673,3 +6673,29 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/198 [00:00<?, ?it/s]100%|██████████| 198/198 [00:00<00:00, 7612.52it/s]
 
 No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
+[main 90a6eb1] Table Autocommit
+ 2 files changed, 38 insertions(+), 14 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   e63933f..90a6eb1  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-15 18:30:02.497277: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-15 18:30:06.890312: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/220 [00:00<?, ?it/s] 35%|███▌      | 78/220 [00:09<00:17,  8.32it/s] 36%|███▌      | 79/220 [00:17<00:36,  3.89it/s] 36%|███▋      | 80/220 [00:22<00:54,  2.58it/s] 37%|███▋      | 81/220 [00:29<01:25,  1.62it/s] 37%|███▋      | 82/220 [00:36<02:08,  1.08it/s] 38%|███▊      | 83/220 [00:44<03:01,  1.33s/it] 38%|███▊      | 84/220 [00:49<03:48,  1.68s/it] 39%|███▊      | 85/220 [00:57<05:07,  2.28s/it] 39%|███▉      | 86/220 [01:04<06:30,  2.92s/it] 40%|███▉      | 87/220 [01:11<07:59,  3.61s/it] 40%|████      | 88/220 [01:18<09:14,  4.20s/it] 85%|████████▌ | 188/220 [01:25<00:07,  4.43it/s] 86%|████████▌ | 189/220 [01:32<00:09,  3.15it/s] 86%|████████▋ | 190/220 [01:38<00:12,  2.37it/s] 87%|████████▋ | 191/220 [01:44<00:16,  1.73it/s] 87%|████████▋ | 192/220 [01:49<00:19,  1.40it/s] 88%|████████▊ | 193/220 [01:55<00:27,  1.00s/it] 88%|████████▊ | 194/220 [02:03<00:36,  1.42s/it] 89%|████████▊ | 195/220 [02:10<00:48,  1.92s/it] 89%|████████▉ | 196/220 [02:14<00:51,  2.16s/it] 90%|████████▉ | 197/220 [02:19<00:59,  2.58s/it] 90%|█████████ | 198/220 [02:24<01:06,  3.00s/it]100%|██████████| 220/220 [02:24<00:00,  1.52it/s]
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_7/Pi_2/Wound_5/2023-01-12-17-48/2023-01-12-17-49-36.jpg (check if corrupted). Skipping...
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_7/Pi_2/Wound_5/2023-01-12-17-48/2023-01-12-17-49-26.jpg (check if corrupted). Skipping...
+
+Added 20 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
