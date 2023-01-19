@@ -10571,3 +10571,30 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/88 [00:00<?, ?it/s]100%|██████████| 88/88 [00:00<00:00, 2426.13it/s]
 
 No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
+[main 66284f7] Table Autocommit
+ 2 files changed, 49 insertions(+), 25 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   7144653..66284f7  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-19 02:30:03.777287: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-19 02:30:17.569280: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/110 [00:00<?, ?it/s]  1%|          | 1/110 [00:12<23:08, 12.74s/it]  2%|▏         | 2/110 [00:27<25:15, 14.03s/it]  3%|▎         | 3/110 [00:39<23:20, 13.08s/it]  4%|▎         | 4/110 [00:58<27:19, 15.47s/it]  5%|▍         | 5/110 [01:09<24:18, 13.89s/it]  5%|▌         | 6/110 [01:16<19:48, 11.43s/it]  6%|▋         | 7/110 [01:28<19:43, 11.49s/it]  7%|▋         | 8/110 [01:35<17:09, 10.09s/it]  8%|▊         | 9/110 [01:45<17:15, 10.25s/it]  9%|▉         | 10/110 [01:56<17:23, 10.44s/it] 10%|█         | 11/110 [02:06<16:57, 10.28s/it] 81%|████████  | 89/110 [02:17<00:08,  2.36it/s] 82%|████████▏ | 90/110 [02:28<00:12,  1.62it/s] 83%|████████▎ | 91/110 [02:40<00:16,  1.12it/s] 84%|████████▎ | 92/110 [02:51<00:22,  1.24s/it] 85%|████████▍ | 93/110 [03:03<00:29,  1.73s/it] 85%|████████▌ | 94/110 [03:13<00:35,  2.23s/it] 86%|████████▋ | 95/110 [03:23<00:43,  2.90s/it] 87%|████████▋ | 96/110 [03:35<00:52,  3.75s/it] 88%|████████▊ | 97/110 [03:51<01:09,  5.35s/it] 89%|████████▉ | 98/110 [04:02<01:14,  6.23s/it] 90%|█████████ | 99/110 [04:16<01:23,  7.61s/it]100%|██████████| 110/110 [04:16<00:00,  2.33s/it]
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_7/Pi_3/Wound_F/2023-01-19-02-14/2023-01-19-02-15-52.jpg (check if corrupted). Skipping...
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_7/Pi_3/Wound_B/2023-01-19-02-18/2023-01-19-02-19-05.jpg (check if corrupted). Skipping...
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_7/Pi_3/Wound_B/2023-01-19-02-18/2023-01-19-02-18-56.jpg (check if corrupted). Skipping...
+
+Added 19 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
