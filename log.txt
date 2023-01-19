@@ -10090,3 +10090,30 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
 0it [00:00, ?it/s]0it [00:00, ?it/s]
 
 No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
+[main ebc8526] Table Autocommit
+ 2 files changed, 48 insertions(+), 24 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   798f349..ebc8526  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-18 17:00:02.868950: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-18 17:00:17.360945: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/22 [00:00<?, ?it/s]  5%|▍         | 1/22 [00:14<05:09, 14.72s/it]  9%|▉         | 2/22 [00:26<04:15, 12.77s/it] 14%|█▎        | 3/22 [00:34<03:27, 10.95s/it] 18%|█▊        | 4/22 [00:44<03:06, 10.36s/it] 23%|██▎       | 5/22 [00:53<02:49,  9.95s/it] 27%|██▋       | 6/22 [01:05<02:47, 10.50s/it] 32%|███▏      | 7/22 [01:16<02:39, 10.64s/it] 36%|███▋      | 8/22 [01:28<02:36, 11.16s/it] 41%|████      | 9/22 [01:38<02:20, 10.79s/it] 45%|████▌     | 10/22 [01:47<02:03, 10.30s/it] 50%|█████     | 11/22 [01:56<01:49,  9.96s/it] 55%|█████▍    | 12/22 [02:06<01:39,  9.91s/it] 59%|█████▉    | 13/22 [02:17<01:33, 10.37s/it] 64%|██████▎   | 14/22 [02:28<01:22, 10.37s/it] 68%|██████▊   | 15/22 [02:37<01:09,  9.96s/it] 73%|███████▎  | 16/22 [02:49<01:03, 10.57s/it] 77%|███████▋  | 17/22 [03:00<00:54, 10.82s/it] 82%|████████▏ | 18/22 [03:11<00:43, 10.86s/it] 86%|████████▋ | 19/22 [03:21<00:31, 10.44s/it] 91%|█████████ | 20/22 [03:31<00:20, 10.42s/it] 95%|█████████▌| 21/22 [03:40<00:09,  9.99s/it]100%|██████████| 22/22 [03:50<00:00,  9.93s/it]100%|██████████| 22/22 [03:50<00:00, 10.47s/it]
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_7/Pi_3/Wound_B/2023-01-18-16-35/2023-01-18-16-36-10.jpg (check if corrupted). Skipping...
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_7/Pi_3/Wound_B/2023-01-18-16-35/2023-01-18-16-37-16.jpg (check if corrupted). Skipping...
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_7/Pi_3/Wound_B/2023-01-18-16-35/2023-01-18-16-36-56.jpg (check if corrupted). Skipping...
+
+Added 19 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
