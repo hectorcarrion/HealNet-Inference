@@ -1,9 +1,0 @@
-Already up to date.
-Traceback (most recent call last):
-  File "/Users/betr/Desktop/HealNet-Inference/healnet_inference.py", line 1, in <module>
-    from tensorflow import keras
-ModuleNotFoundError: No module named 'tensorflow'
-[main 1b6b779] Table Autocommit
- 1 file changed, 4 insertions(+), 22591 deletions(-)
-fatal: could not read Username for 'https://github.com': Device not configured
-Next HealNet run set in 30m
