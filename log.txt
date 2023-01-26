@@ -437,3 +437,27 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/133 [00:00<?, ?it/s]100%|██████████| 133/133 [00:00<00:00, 8810.87it/s]
 
 No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
+[main 3a18197] Table Autocommit
+ 2 files changed, 41 insertions(+), 17 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   1a01c05..3a18197  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-25 23:00:02.256992: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-25 23:00:08.748951: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/188 [00:00<?, ?it/s]  1%|          | 2/188 [00:09<14:27,  4.67s/it]  2%|▏         | 3/188 [00:16<17:01,  5.52s/it]  2%|▏         | 4/188 [00:22<18:13,  5.94s/it]  3%|▎         | 5/188 [00:29<18:52,  6.19s/it]  3%|▎         | 6/188 [00:36<19:15,  6.35s/it]  4%|▎         | 7/188 [00:42<19:29,  6.46s/it]  4%|▍         | 8/188 [00:49<19:40,  6.56s/it]  5%|▍         | 9/188 [00:56<19:37,  6.58s/it]  5%|▌         | 10/188 [01:02<19:32,  6.59s/it]  6%|▌         | 11/188 [01:09<19:32,  6.62s/it]  6%|▋         | 12/188 [01:16<19:25,  6.62s/it] 19%|█▊        | 35/188 [01:21<02:08,  1.19it/s] 19%|█▉        | 36/188 [01:27<02:49,  1.11s/it] 20%|█▉        | 37/188 [01:34<03:46,  1.50s/it] 20%|██        | 38/188 [01:41<04:56,  1.97s/it] 21%|██        | 39/188 [01:47<06:15,  2.52s/it] 21%|██▏       | 40/188 [01:54<07:39,  3.11s/it] 22%|██▏       | 41/188 [02:01<09:06,  3.72s/it] 22%|██▏       | 42/188 [02:07<10:14,  4.21s/it] 23%|██▎       | 43/188 [02:14<11:25,  4.73s/it] 23%|██▎       | 44/188 [02:19<11:59,  5.00s/it] 24%|██▍       | 45/188 [02:26<12:45,  5.36s/it] 36%|███▌      | 68/188 [02:32<01:36,  1.25it/s] 37%|███▋      | 69/188 [02:37<02:06,  1.06s/it] 37%|███▋      | 70/188 [02:44<02:54,  1.47s/it] 38%|███▊      | 71/188 [02:51<03:47,  1.94s/it] 38%|███▊      | 72/188 [02:58<04:45,  2.46s/it] 39%|███▉      | 73/188 [03:04<05:49,  3.04s/it] 39%|███▉      | 74/188 [03:10<06:47,  3.57s/it] 40%|███▉      | 75/188 [03:17<07:49,  4.15s/it] 40%|████      | 76/188 [03:23<08:37,  4.62s/it] 41%|████      | 77/188 [03:30<09:26,  5.10s/it] 41%|████▏     | 78/188 [03:36<09:56,  5.42s/it] 60%|█████▉    | 112/188 [03:43<00:44,  1.69it/s] 60%|██████    | 113/188 [03:49<01:01,  1.23it/s] 61%|██████    | 114/188 [03:56<01:22,  1.11s/it] 61%|██████    | 115/188 [04:03<01:47,  1.48s/it] 62%|██████▏   | 116/188 [04:09<02:18,  1.93s/it] 62%|██████▏   | 117/188 [04:16<02:53,  2.45s/it] 63%|██████▎   | 118/188 [04:23<03:32,  3.03s/it] 63%|██████▎   | 119/188 [04:29<04:11,  3.65s/it] 64%|██████▍   | 120/188 [04:36<04:46,  4.22s/it] 64%|██████▍   | 121/188 [04:43<05:16,  4.73s/it] 65%|██████▍   | 122/188 [04:49<05:42,  5.19s/it] 83%|████████▎ | 156/188 [04:56<00:19,  1.67it/s] 84%|████████▎ | 157/188 [05:03<00:25,  1.21it/s] 84%|████████▍ | 158/188 [05:09<00:33,  1.12s/it] 85%|████████▍ | 159/188 [05:16<00:43,  1.49s/it] 85%|████████▌ | 160/188 [05:23<00:54,  1.96s/it] 86%|████████▌ | 161/188 [05:29<01:06,  2.48s/it] 86%|████████▌ | 162/188 [05:36<01:19,  3.05s/it] 87%|████████▋ | 163/188 [05:43<01:31,  3.65s/it] 87%|████████▋ | 164/188 [05:49<01:41,  4.23s/it] 88%|████████▊ | 165/188 [05:56<01:49,  4.75s/it] 88%|████████▊ | 166/188 [06:03<01:54,  5.20s/it]100%|██████████| 188/188 [06:03<00:00,  1.93s/it]
+
+Added 55 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
