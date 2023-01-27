@@ -2315,3 +2315,27 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/1189 [00:00<?, ?it/s] 48%|████▊     | 572/1189 [00:00<00:00, 5718.86it/s] 97%|█████████▋| 1157/1189 [00:00<00:00, 5789.84it/s]100%|██████████| 1189/1189 [00:00<00:00, 5769.27it/s]
 
 No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
+[main e3fbfe9] Table Autocommit
+ 2 files changed, 54 insertions(+), 30 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   b873ce5..e3fbfe9  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-27 13:30:02.546841: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-27 13:30:06.441821: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/1215 [00:00<?, ?it/s]  1%|          | 13/1215 [00:06<10:17,  1.95it/s]  1%|          | 14/1215 [00:12<20:33,  1.03s/it]  1%|          | 15/1215 [00:18<32:05,  1.60s/it]  1%|▏         | 16/1215 [00:23<44:15,  2.21s/it] 30%|███       | 369/1215 [00:30<00:40, 21.06it/s] 30%|███       | 369/1215 [00:40<00:40, 21.06it/s] 31%|███       | 371/1215 [00:43<01:24, 10.03it/s] 31%|███       | 372/1215 [00:50<01:54,  7.39it/s] 31%|███       | 372/1215 [01:00<01:54,  7.39it/s] 31%|███       | 374/1215 [01:03<03:20,  4.19it/s] 31%|███       | 375/1215 [01:10<04:20,  3.23it/s] 31%|███       | 376/1215 [01:16<05:43,  2.44it/s] 31%|███       | 377/1215 [01:23<07:37,  1.83it/s] 31%|███       | 378/1215 [01:29<10:07,  1.38it/s] 31%|███       | 379/1215 [01:36<13:32,  1.03it/s] 45%|████▍     | 545/1215 [01:42<01:22,  8.10it/s] 45%|████▍     | 546/1215 [01:48<01:51,  6.01it/s] 45%|████▌     | 547/1215 [01:54<02:37,  4.25it/s] 45%|████▌     | 548/1215 [02:00<03:35,  3.10it/s] 45%|████▌     | 549/1215 [02:06<04:55,  2.25it/s] 45%|████▌     | 550/1215 [02:12<06:52,  1.61it/s] 45%|████▌     | 551/1215 [02:19<09:19,  1.19it/s] 45%|████▌     | 552/1215 [02:25<12:39,  1.15s/it] 46%|████▌     | 553/1215 [02:31<17:02,  1.54s/it] 46%|████▌     | 554/1215 [02:38<21:54,  1.99s/it] 46%|████▌     | 555/1215 [02:44<27:41,  2.52s/it] 92%|█████████▏| 1122/1215 [02:44<00:02, 38.43it/s]100%|██████████| 1215/1215 [02:44<00:00,  7.37it/s]
+
+Added 26 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
