@@ -2023,3 +2023,27 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/1057 [00:00<?, ?it/s] 15%|█▌        | 159/1057 [00:06<00:35, 25.07it/s] 16%|█▌        | 164/1057 [00:12<01:18, 11.43it/s] 75%|███████▍  | 791/1057 [00:12<00:02, 98.09it/s] 75%|███████▍  | 791/1057 [00:30<00:02, 98.09it/s] 82%|████████▏ | 868/1057 [00:32<00:08, 22.51it/s] 82%|████████▏ | 870/1057 [00:39<00:11, 16.35it/s] 82%|████████▏ | 870/1057 [00:50<00:11, 16.35it/s] 87%|████████▋ | 916/1057 [00:53<00:13, 10.54it/s] 87%|████████▋ | 917/1057 [01:00<00:17,  8.03it/s] 87%|████████▋ | 917/1057 [01:10<00:17,  8.03it/s] 87%|████████▋ | 919/1057 [01:13<00:28,  4.84it/s] 87%|████████▋ | 920/1057 [01:20<00:36,  3.79it/s] 87%|████████▋ | 920/1057 [01:31<00:36,  3.79it/s] 87%|████████▋ | 922/1057 [01:34<00:57,  2.36it/s] 87%|████████▋ | 923/1057 [01:41<01:11,  1.87it/s] 87%|████████▋ | 923/1057 [01:51<01:11,  1.87it/s] 88%|████████▊ | 925/1057 [01:55<01:49,  1.21it/s]100%|██████████| 1057/1057 [01:55<00:00,  9.17it/s]
 
 Added 17 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
+[main 0a82c90] Table Autocommit
+ 2 files changed, 117 insertions(+), 76 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   dc09d95..0a82c90  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-27 07:30:02.206865: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-27 07:30:08.041709: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/1057 [00:00<?, ?it/s] 54%|█████▍    | 572/1057 [00:00<00:00, 5712.57it/s]100%|██████████| 1057/1057 [00:00<00:00, 5834.52it/s]
+
+No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
