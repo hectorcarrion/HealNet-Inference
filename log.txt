@@ -2900,3 +2900,27 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/1519 [00:00<?, ?it/s] 27%|██▋       | 413/1519 [00:00<00:00, 4128.34it/s] 56%|█████▋    | 855/1519 [00:00<00:00, 4295.63it/s] 86%|████████▌ | 1305/1519 [00:00<00:00, 4385.21it/s]100%|██████████| 1519/1519 [00:00<00:00, 4379.32it/s]
 
 No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
+[main bb03d54] Table Autocommit
+ 2 files changed, 93 insertions(+), 69 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   f9dcbc7..bb03d54  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-28 01:30:02.233062: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-28 01:30:05.830652: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/1529 [00:00<?, ?it/s] 32%|███▏      | 491/1529 [00:00<00:00, 4900.54it/s] 32%|███▏      | 491/1529 [00:10<00:00, 4900.54it/s] 48%|████▊     | 729/1529 [00:12<00:16, 47.20it/s]   48%|████▊     | 731/1529 [00:23<00:38, 20.59it/s] 48%|████▊     | 732/1529 [00:28<00:52, 15.26it/s] 48%|████▊     | 732/1529 [00:40<00:52, 15.26it/s] 48%|████▊     | 734/1529 [00:40<01:39,  8.03it/s] 48%|████▊     | 735/1529 [00:46<02:08,  6.16it/s] 55%|█████▌    | 845/1529 [00:58<01:31,  7.48it/s] 88%|████████▊ | 1341/1529 [00:58<00:05, 32.51it/s]100%|██████████| 1529/1529 [00:58<00:00, 26.28it/s]
+
+Added 10 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
