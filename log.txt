@@ -3577,3 +3577,27 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/1915 [00:00<?, ?it/s] 21%|██        | 401/1915 [00:00<00:00, 4006.38it/s] 43%|████▎     | 814/1915 [00:00<00:00, 4074.14it/s] 64%|██████▍   | 1228/1915 [00:00<00:00, 4101.69it/s] 64%|██████▍   | 1228/1915 [00:20<00:00, 4101.69it/s] 66%|██████▌   | 1258/1915 [00:22<00:22, 29.18it/s]   66%|██████▌   | 1259/1915 [00:29<00:31, 20.63it/s] 66%|██████▌   | 1259/1915 [00:40<00:31, 20.63it/s] 66%|██████▌   | 1261/1915 [00:42<00:57, 11.29it/s] 66%|██████▌   | 1262/1915 [00:49<01:16,  8.55it/s] 66%|██████▌   | 1262/1915 [01:00<01:16,  8.55it/s] 66%|██████▌   | 1264/1915 [01:02<02:08,  5.06it/s] 66%|██████▌   | 1265/1915 [01:09<02:45,  3.92it/s] 72%|███████▏  | 1370/1915 [01:16<01:20,  6.79it/s] 75%|███████▌  | 1443/1915 [01:22<00:58,  8.09it/s] 75%|███████▌  | 1443/1915 [01:41<00:58,  8.09it/s] 76%|███████▌  | 1446/1915 [01:41<01:59,  3.91it/s] 76%|███████▌  | 1447/1915 [01:47<02:25,  3.21it/s] 76%|███████▌  | 1447/1915 [02:01<02:25,  3.21it/s] 76%|███████▌  | 1450/1915 [02:05<04:13,  1.84it/s] 76%|███████▌  | 1451/1915 [02:12<05:04,  1.53it/s] 77%|███████▋  | 1475/1915 [02:24<04:24,  1.66it/s] 87%|████████▋ | 1674/1915 [02:31<00:32,  7.42it/s] 87%|████████▋ | 1674/1915 [02:41<00:32,  7.42it/s] 88%|████████▊ | 1676/1915 [02:44<00:50,  4.76it/s] 88%|████████▊ | 1677/1915 [02:52<01:04,  3.69it/s] 88%|████████▊ | 1677/1915 [03:12<01:04,  3.69it/s] 88%|████████▊ | 1680/1915 [03:12<01:56,  2.02it/s] 88%|████████▊ | 1681/1915 [03:19<02:19,  1.68it/s] 88%|████████▊ | 1681/1915 [03:32<02:19,  1.68it/s] 88%|████████▊ | 1683/1915 [03:32<03:19,  1.16it/s] 88%|████████▊ | 1684/1915 [03:39<04:00,  1.04s/it]100%|██████████| 1915/1915 [03:39<00:00,  8.72it/s]
 
 Added 33 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
+[main b99f592] Table Autocommit
+ 2 files changed, 105 insertions(+), 48 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   0815bb6..b99f592  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-28 15:30:01.639278: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-28 15:30:06.956884: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/1915 [00:00<?, ?it/s] 22%|██▏       | 417/1915 [00:00<00:00, 4166.33it/s] 44%|████▍     | 850/1915 [00:00<00:00, 4262.14it/s] 67%|██████▋   | 1286/1915 [00:00<00:00, 4305.07it/s] 90%|████████▉ | 1722/1915 [00:00<00:00, 4323.38it/s]100%|██████████| 1915/1915 [00:00<00:00, 4304.25it/s]
+
+No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
