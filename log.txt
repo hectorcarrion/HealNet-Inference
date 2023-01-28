@@ -2996,3 +2996,27 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/1585 [00:00<?, ?it/s] 31%|███       | 489/1585 [00:00<00:00, 4888.09it/s] 31%|███       | 489/1585 [00:10<00:00, 4888.09it/s] 61%|██████    | 960/1585 [00:15<00:11, 54.09it/s]   61%|██████    | 960/1585 [00:30<00:11, 54.09it/s] 61%|██████    | 963/1585 [00:35<00:33, 18.54it/s] 61%|██████    | 964/1585 [00:41<00:43, 14.25it/s] 61%|██████    | 964/1585 [01:00<00:43, 14.25it/s] 61%|██████    | 967/1585 [01:01<01:26,  7.19it/s] 61%|██████    | 968/1585 [01:08<01:45,  5.82it/s] 68%|██████▊   | 1078/1585 [01:15<01:02,  8.17it/s] 68%|██████▊   | 1078/1585 [01:31<01:02,  8.17it/s] 72%|███████▏  | 1137/1585 [01:33<01:15,  5.92it/s] 72%|███████▏  | 1138/1585 [01:39<01:32,  4.84it/s] 72%|███████▏  | 1138/1585 [01:51<01:32,  4.84it/s] 72%|███████▏  | 1140/1585 [01:51<02:17,  3.23it/s] 72%|███████▏  | 1141/1585 [01:58<02:49,  2.62it/s] 72%|███████▏  | 1141/1585 [02:11<02:49,  2.62it/s] 72%|███████▏  | 1144/1585 [02:15<04:41,  1.57it/s] 72%|███████▏  | 1145/1585 [02:21<05:35,  1.31it/s] 90%|████████▉ | 1421/1585 [02:27<00:16, 10.22it/s] 90%|████████▉ | 1421/1585 [02:41<00:16, 10.22it/s] 90%|████████▉ | 1424/1585 [02:47<00:30,  5.33it/s] 90%|████████▉ | 1425/1585 [02:53<00:36,  4.39it/s] 90%|████████▉ | 1425/1585 [03:12<00:36,  4.39it/s] 90%|█████████ | 1428/1585 [03:13<01:02,  2.50it/s] 90%|█████████ | 1429/1585 [03:20<01:14,  2.08it/s] 90%|█████████ | 1429/1585 [03:32<01:14,  2.08it/s] 90%|█████████ | 1431/1585 [03:33<01:46,  1.44it/s]100%|██████████| 1585/1585 [03:33<00:00,  7.43it/s]
 
 Added 33 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
+[main 9569676] Table Autocommit
+ 2 files changed, 97 insertions(+), 40 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   d99f7b3..9569676  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-28 03:30:02.602778: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-28 03:30:08.706373: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/1585 [00:00<?, ?it/s] 28%|██▊       | 450/1585 [00:00<00:00, 4491.28it/s] 59%|█████▉    | 941/1585 [00:00<00:00, 4732.79it/s] 90%|█████████ | 1430/1585 [00:00<00:00, 4804.05it/s]100%|██████████| 1585/1585 [00:00<00:00, 4767.50it/s]
+
+No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
