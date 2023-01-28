@@ -2828,3 +2828,27 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/1486 [00:00<?, ?it/s]  2%|▏         | 24/1486 [00:08<08:49,  2.76it/s]  2%|▏         | 25/1486 [00:15<17:12,  1.42it/s]  2%|▏         | 26/1486 [00:21<27:16,  1.12s/it]  2%|▏         | 27/1486 [00:27<39:00,  1.60s/it]  2%|▏         | 28/1486 [00:34<53:03,  2.18s/it]  2%|▏         | 29/1486 [00:40<1:07:56,  2.80s/it]  2%|▏         | 30/1486 [00:47<1:24:38,  3.49s/it]  2%|▏         | 31/1486 [00:53<1:38:51,  4.08s/it]  2%|▏         | 32/1486 [01:00<1:51:17,  4.59s/it]  2%|▏         | 33/1486 [01:05<1:58:24,  4.89s/it]  2%|▏         | 34/1486 [01:11<2:04:03,  5.13s/it] 22%|██▏       | 321/1486 [01:18<01:23, 14.00it/s]  22%|██▏       | 323/1486 [01:29<02:27,  7.89it/s] 22%|██▏       | 324/1486 [01:35<03:15,  5.94it/s] 22%|██▏       | 325/1486 [01:42<04:22,  4.41it/s] 22%|██▏       | 326/1486 [01:47<05:41,  3.39it/s] 22%|██▏       | 327/1486 [01:53<07:54,  2.44it/s] 22%|██▏       | 328/1486 [01:59<10:46,  1.79it/s] 22%|██▏       | 329/1486 [02:06<15:15,  1.26it/s] 22%|██▏       | 330/1486 [02:12<20:42,  1.07s/it] 22%|██▏       | 331/1486 [02:18<27:05,  1.41s/it] 42%|████▏     | 629/1486 [02:24<00:58, 14.74it/s] 42%|████▏     | 631/1486 [02:34<01:36,  8.83it/s] 43%|████▎     | 632/1486 [02:40<02:08,  6.65it/s] 43%|████▎     | 634/1486 [02:51<03:29,  4.07it/s] 43%|████▎     | 635/1486 [02:57<04:35,  3.09it/s] 43%|████▎     | 636/1486 [03:03<05:56,  2.39it/s] 43%|████▎     | 637/1486 [03:08<07:39,  1.85it/s] 43%|████▎     | 638/1486 [03:14<10:20,  1.37it/s] 43%|████▎     | 639/1486 [03:20<13:49,  1.02it/s] 77%|███████▋  | 1141/1486 [03:20<00:09, 35.38it/s]100%|██████████| 1486/1486 [03:20<00:00,  7.40it/s]
 
 Added 33 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
+[main 911ff5d] Table Autocommit
+ 2 files changed, 92 insertions(+), 35 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   26c34c9..911ff5d  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-28 00:00:02.169935: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-28 00:00:07.828968: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/1486 [00:00<?, ?it/s] 32%|███▏      | 476/1486 [00:00<00:00, 4750.04it/s] 67%|██████▋   | 989/1486 [00:00<00:00, 4970.44it/s]100%|██████████| 1486/1486 [00:00<00:00, 5002.54it/s]
+
+No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
