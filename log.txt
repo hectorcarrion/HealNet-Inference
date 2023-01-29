@@ -3697,3 +3697,27 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/1981 [00:00<?, ?it/s] 20%|██        | 406/1981 [00:00<00:00, 4053.00it/s] 42%|████▏     | 833/1981 [00:00<00:00, 4176.19it/s] 63%|██████▎   | 1251/1981 [00:08<00:07, 102.82it/s] 80%|███████▉  | 1575/1981 [00:15<00:05, 74.57it/s]  80%|███████▉  | 1575/1981 [00:30<00:05, 74.57it/s] 80%|███████▉  | 1578/1981 [00:34<00:16, 24.14it/s] 80%|███████▉  | 1579/1981 [00:40<00:21, 18.39it/s] 80%|███████▉  | 1579/1981 [01:00<00:21, 18.39it/s] 80%|███████▉  | 1583/1981 [01:05<00:50,  7.91it/s] 80%|███████▉  | 1584/1981 [01:12<01:01,  6.49it/s] 83%|████████▎ | 1644/1981 [01:18<00:47,  7.08it/s] 86%|████████▌ | 1696/1981 [01:25<00:39,  7.25it/s] 86%|████████▌ | 1696/1981 [01:41<00:39,  7.25it/s] 86%|████████▌ | 1699/1981 [01:45<01:16,  3.70it/s] 86%|████████▌ | 1700/1981 [01:52<01:33,  3.00it/s] 86%|████████▌ | 1700/1981 [02:11<01:33,  3.00it/s] 86%|████████▌ | 1703/1981 [02:12<02:42,  1.72it/s] 86%|████████▌ | 1704/1981 [02:19<03:10,  1.45it/s] 86%|████████▌ | 1704/1981 [02:31<03:10,  1.45it/s] 86%|████████▌ | 1706/1981 [02:32<04:31,  1.01it/s]100%|██████████| 1981/1981 [02:32<00:00, 12.97it/s]
 
 Added 23 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
+[main 1849559] Table Autocommit
+ 2 files changed, 105 insertions(+), 58 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   854b686..1849559  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-28 18:00:01.917834: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-28 18:00:07.319382: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/1981 [00:00<?, ?it/s] 20%|█▉        | 388/1981 [00:00<00:00, 3872.56it/s] 41%|████      | 812/1981 [00:00<00:00, 4087.74it/s] 62%|██████▏   | 1234/1981 [00:00<00:00, 4147.50it/s] 84%|████████▎ | 1659/1981 [00:00<00:00, 4184.39it/s]100%|██████████| 1981/1981 [00:00<00:00, 4153.48it/s]
+
+No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
