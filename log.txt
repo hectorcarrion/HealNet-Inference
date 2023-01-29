@@ -4517,3 +4517,27 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/2212 [00:00<?, ?it/s] 17%|█▋        | 379/2212 [00:00<00:00, 3784.84it/s] 35%|███▍      | 769/2212 [00:00<00:00, 3846.67it/s] 52%|█████▏    | 1158/2212 [00:00<00:00, 3865.37it/s] 70%|███████   | 1551/2212 [00:00<00:00, 3889.87it/s] 88%|████████▊ | 1944/2212 [00:00<00:00, 3901.44it/s]100%|██████████| 2212/2212 [00:00<00:00, 3885.58it/s]
 
 No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
+[main 5a7a4b8] Table Autocommit
+ 2 files changed, 74 insertions(+), 50 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   5018dc1..5a7a4b8  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-29 11:00:01.562666: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-29 11:00:05.897277: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/2212 [00:00<?, ?it/s] 17%|█▋        | 378/2212 [00:00<00:00, 3772.48it/s] 35%|███▍      | 771/2212 [00:00<00:00, 3863.61it/s] 52%|█████▏    | 1158/2212 [00:00<00:00, 3545.80it/s] 70%|███████   | 1554/2212 [00:00<00:00, 3700.71it/s] 88%|████████▊ | 1949/2212 [00:00<00:00, 3784.09it/s]100%|██████████| 2212/2212 [00:00<00:00, 3767.13it/s]
+
+No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
