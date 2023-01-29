@@ -3796,3 +3796,27 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
   0%|          | 0/2040 [00:00<?, ?it/s] 11%|█         | 225/2040 [00:08<01:06, 27.11it/s] 32%|███▏      | 645/2040 [00:08<00:14, 97.72it/s] 52%|█████▏    | 1062/2040 [00:08<00:05, 193.82it/s] 52%|█████▏    | 1062/2040 [00:20<00:05, 193.82it/s] 62%|██████▏   | 1257/2040 [00:22<00:17, 44.56it/s]  62%|██████▏   | 1259/2040 [00:36<00:37, 21.01it/s] 62%|██████▏   | 1260/2040 [00:42<00:49, 15.77it/s] 62%|██████▏   | 1260/2040 [01:00<00:49, 15.77it/s] 62%|██████▏   | 1263/2040 [01:02<01:45,  7.37it/s] 62%|██████▏   | 1264/2040 [01:07<02:07,  6.08it/s] 68%|██████▊   | 1390/2040 [01:20<01:27,  7.47it/s] 70%|██████▉   | 1421/2040 [01:26<01:27,  7.04it/s] 70%|██████▉   | 1421/2040 [01:41<01:27,  7.04it/s] 70%|██████▉   | 1424/2040 [01:45<02:42,  3.80it/s] 70%|██████▉   | 1425/2040 [01:51<03:17,  3.12it/s] 70%|██████▉   | 1425/2040 [02:01<03:17,  3.12it/s] 70%|██████▉   | 1427/2040 [02:04<04:52,  2.10it/s] 70%|███████   | 1428/2040 [02:10<05:54,  1.73it/s] 70%|███████   | 1428/2040 [02:21<05:54,  1.73it/s] 70%|███████   | 1430/2040 [02:23<08:49,  1.15it/s] 70%|███████   | 1431/2040 [02:29<10:46,  1.06s/it] 86%|████████▌ | 1751/2040 [02:36<00:24, 12.01it/s] 86%|████████▌ | 1751/2040 [02:52<00:24, 12.01it/s] 86%|████████▌ | 1754/2040 [02:56<00:47,  6.03it/s]100%|██████████| 2040/2040 [02:56<00:00, 11.56it/s]
 
 Added 27 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
+[main 45623db] Table Autocommit
+ 2 files changed, 102 insertions(+), 51 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   f713ca4..45623db  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-01-28 20:00:02.000076: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-01-28 20:00:07.645273: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/2047 [00:00<?, ?it/s] 19%|█▊        | 381/2047 [00:00<00:00, 3807.11it/s] 39%|███▊      | 791/2047 [00:00<00:00, 3978.31it/s] 59%|█████▉    | 1204/2047 [00:00<00:00, 4044.36it/s] 79%|███████▉  | 1618/2047 [00:00<00:00, 4079.24it/s] 79%|███████▉  | 1618/2047 [00:20<00:00, 4079.24it/s] 86%|████████▌ | 1753/2047 [00:22<00:07, 38.43it/s]   86%|████████▌ | 1754/2047 [00:29<00:11, 26.26it/s] 86%|████████▌ | 1754/2047 [00:40<00:11, 26.26it/s] 86%|████████▌ | 1756/2047 [00:43<00:20, 14.27it/s] 86%|████████▌ | 1758/2047 [00:50<00:26, 10.83it/s]100%|██████████| 2047/2047 [00:50<00:00, 40.64it/s]
+
+Added 7 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
