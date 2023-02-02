@@ -8346,3 +8346,35 @@ WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 ca
 Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_2/Wound_7/2023-01-25-18-58/2023-01-25-18-59-59.jpg (check if corrupted). Skipping...
 
 No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
+[main ca59106] Table Autocommit
+ 2 files changed, 35 insertions(+), 3 deletions(-)
+ssh: connect to host github.com port 22: Operation timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Next HealNet run set in 30m
+ssh: connect to host github.com port 22: Operation timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2023-02-02 12:01:15.954071: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-02-02 12:01:21.189363: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/833 [00:00<?, ?it/s]  6%|▌         | 46/833 [00:05<01:30,  8.70it/s] 21%|██        | 173/833 [00:13<00:50, 13.18it/s] 21%|██        | 175/833 [00:26<02:05,  5.26it/s] 21%|██        | 176/833 [00:33<02:57,  3.71it/s] 21%|██        | 177/833 [00:39<04:07,  2.65it/s] 21%|██▏       | 178/833 [00:46<05:45,  1.89it/s] 21%|██▏       | 179/833 [00:52<07:58,  1.37it/s] 22%|██▏       | 180/833 [00:59<10:41,  1.02it/s] 22%|██▏       | 181/833 [01:05<14:25,  1.33s/it] 22%|██▏       | 182/833 [01:12<18:59,  1.75s/it] 22%|██▏       | 183/833 [01:18<24:05,  2.22s/it] 46%|████▌     | 382/833 [01:25<00:47,  9.50it/s] 46%|████▌     | 383/833 [01:31<01:07,  6.65it/s] 46%|████▌     | 384/833 [01:38<01:35,  4.69it/s] 46%|████▌     | 385/833 [01:45<02:14,  3.33it/s] 46%|████▋     | 386/833 [01:51<03:05,  2.41it/s] 46%|████▋     | 387/833 [01:56<03:59,  1.86it/s] 47%|████▋     | 388/833 [02:02<05:34,  1.33it/s] 47%|████▋     | 389/833 [02:08<07:22,  1.00it/s] 47%|████▋     | 390/833 [02:14<09:54,  1.34s/it] 47%|████▋     | 391/833 [02:20<13:04,  1.78s/it] 47%|████▋     | 392/833 [02:27<16:50,  2.29s/it] 87%|████████▋ | 726/833 [02:33<00:06, 16.55it/s] 87%|████████▋ | 728/833 [02:45<00:11,  9.02it/s] 88%|████████▊ | 729/833 [02:52<00:15,  6.71it/s] 88%|████████▊ | 729/833 [03:02<00:15,  6.71it/s] 88%|████████▊ | 731/833 [03:05<00:25,  3.93it/s] 88%|████████▊ | 732/833 [03:11<00:32,  3.07it/s] 88%|████████▊ | 733/833 [03:17<00:42,  2.35it/s] 88%|████████▊ | 734/833 [03:24<00:55,  1.77it/s] 88%|████████▊ | 735/833 [03:30<01:14,  1.32it/s] 88%|████████▊ | 736/833 [03:37<01:37,  1.01s/it]100%|██████████| 833/833 [03:37<00:00,  3.83it/s]
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_2/Wound_7/2023-01-25-18-58/2023-01-25-18-59-59.jpg (check if corrupted). Skipping...
+
+Added 33 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
