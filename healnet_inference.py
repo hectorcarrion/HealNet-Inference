@@ -244,8 +244,9 @@ for image in tqdm(image_paths):
             prob_table.loc[len(prob_table)] = [str(image), time, blur, len(preds),
                                                hemo, infl, prol, matu]
             processed_ctr += 1
-        except:
+        except Exception as e:
             print(f"Unable to open {image} (check if corrupted). Skipping...")
+            print(f"Exception: {e}")
 
 prob_table.to_csv(prob_table_path, index=False)
 
