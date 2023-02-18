@@ -34506,3 +34506,45 @@ Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_3/2023-01-
 Exception: image file is truncated (7 bytes not processed)
 
 No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
+[main d032bc2] Table Autocommit
+ 2 files changed, 102 insertions(+), 60 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   2656f57..d032bc2  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-02-18 09:00:02.525286: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-02-18 09:00:06.590857: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/2835 [00:00<?, ?it/s] 12%|█▏        | 332/2835 [00:08<01:05, 38.38it/s] 12%|█▏        | 332/2835 [00:20<01:05, 38.38it/s] 12%|█▏        | 334/2835 [00:22<03:32, 11.78it/s] 12%|█▏        | 335/2835 [00:29<05:16,  7.89it/s] 12%|█▏        | 335/2835 [00:40<05:16,  7.89it/s] 12%|█▏        | 337/2835 [00:43<10:04,  4.13it/s] 12%|█▏        | 338/2835 [00:50<13:25,  3.10it/s] 12%|█▏        | 339/2835 [00:57<18:00,  2.31it/s] 12%|█▏        | 340/2835 [01:03<24:17,  1.71it/s] 12%|█▏        | 341/2835 [01:10<32:56,  1.26it/s] 12%|█▏        | 342/2835 [01:17<44:07,  1.06s/it] 14%|█▎        | 384/2835 [01:24<16:42,  2.44it/s] 14%|█▎        | 385/2835 [01:31<23:06,  1.77it/s] 14%|█▎        | 386/2835 [01:40<34:01,  1.20it/s] 14%|█▎        | 387/2835 [01:47<45:14,  1.11s/it] 14%|█▎        | 388/2835 [01:54<59:37,  1.46s/it] 14%|█▎        | 389/2835 [02:00<1:17:05,  1.89s/it] 14%|█▍        | 390/2835 [02:07<1:38:06,  2.41s/it] 14%|█▍        | 391/2835 [02:16<2:08:51,  3.16s/it] 14%|█▍        | 392/2835 [02:22<2:31:54,  3.73s/it] 14%|█▍        | 393/2835 [02:29<2:55:38,  4.32s/it] 14%|█▍        | 394/2835 [02:39<3:43:57,  5.50s/it] 18%|█▊        | 515/2835 [02:46<07:58,  4.85it/s]   18%|█▊        | 516/2835 [02:53<10:57,  3.53it/s] 18%|█▊        | 517/2835 [03:00<14:59,  2.58it/s] 18%|█▊        | 518/2835 [03:07<20:35,  1.88it/s] 18%|█▊        | 519/2835 [03:15<29:55,  1.29it/s] 18%|█▊        | 520/2835 [03:22<39:52,  1.03s/it] 18%|█▊        | 521/2835 [03:29<52:47,  1.37s/it] 18%|█▊        | 522/2835 [03:39<1:15:27,  1.96s/it] 18%|█▊        | 523/2835 [03:45<1:33:46,  2.43s/it] 18%|█▊        | 524/2835 [03:52<1:54:59,  2.99s/it] 19%|█▊        | 525/2835 [03:59<2:17:25,  3.57s/it] 32%|███▏      | 912/2835 [03:59<01:23, 23.08it/s]   46%|████▌     | 1303/2835 [03:59<00:27, 55.52it/s] 61%|██████    | 1716/2835 [04:00<00:10, 103.52it/s] 75%|███████▌  | 2135/2835 [04:00<00:04, 171.16it/s]Premature end of JPEG file
+ 86%|████████▌ | 2445/2835 [04:01<00:01, 203.83it/s] 94%|█████████▍| 2673/2835 [04:01<00:00, 260.15it/s]100%|██████████| 2835/2835 [04:01<00:00, 11.75it/s] 
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-19-18/2023-01-29-19-18-40.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-19-18/2023-01-29-19-18-18.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-20-19/2023-01-29-20-20-23.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-20-19/2023-01-29-20-20-04.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-20-19/2023-01-29-20-20-14.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_3/2023-01-29-20-25/2023-01-29-20-26-01.jpg (check if corrupted). Skipping...
+Exception: image file is truncated (7 bytes not processed)
+
+Added 33 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
