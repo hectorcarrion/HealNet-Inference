@@ -34842,3 +34842,45 @@ Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_3/2023-01-
 Exception: image file is truncated (7 bytes not processed)
 
 No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
+[main f8d1ab9] Table Autocommit
+ 2 files changed, 74 insertions(+), 32 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   bdb6b75..f8d1ab9  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-02-18 13:00:01.984124: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-02-18 13:00:05.868803: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/2939 [00:00<?, ?it/s]  3%|▎         | 79/2939 [00:08<05:11,  9.19it/s]  3%|▎         | 80/2939 [00:15<10:55,  4.36it/s]  3%|▎         | 81/2939 [00:22<18:52,  2.52it/s]  3%|▎         | 82/2939 [00:29<29:27,  1.62it/s]  3%|▎         | 83/2939 [00:36<43:26,  1.10it/s]  3%|▎         | 84/2939 [00:43<1:01:12,  1.29s/it]  3%|▎         | 85/2939 [00:50<1:23:10,  1.75s/it]  3%|▎         | 86/2939 [00:57<1:48:44,  2.29s/it]  3%|▎         | 87/2939 [01:03<2:17:10,  2.89s/it]  3%|▎         | 88/2939 [01:10<2:47:10,  3.52s/it]  3%|▎         | 89/2939 [01:17<3:16:26,  4.14s/it]  9%|▉         | 266/2939 [01:24<05:36,  7.95it/s]   9%|▉         | 267/2939 [01:31<07:59,  5.57it/s]  9%|▉         | 268/2939 [01:41<12:48,  3.47it/s]  9%|▉         | 269/2939 [01:48<17:33,  2.53it/s]  9%|▉         | 270/2939 [01:55<23:51,  1.86it/s]  9%|▉         | 271/2939 [02:02<32:21,  1.37it/s]  9%|▉         | 272/2939 [02:09<44:34,  1.00s/it]  9%|▉         | 273/2939 [02:18<1:03:03,  1.42s/it]  9%|▉         | 274/2939 [02:25<1:20:44,  1.82s/it]  9%|▉         | 275/2939 [02:32<1:41:56,  2.30s/it]  9%|▉         | 276/2939 [02:38<2:06:02,  2.84s/it] 22%|██▏       | 650/2939 [02:39<01:40, 22.75it/s]   35%|███▍      | 1024/2939 [02:39<00:35, 54.30it/s] 48%|████▊     | 1402/2939 [02:39<00:15, 98.92it/s] 62%|██████▏   | 1808/2939 [02:39<00:06, 165.54it/s] 75%|███████▌  | 2213/2939 [02:39<00:02, 256.69it/s]Premature end of JPEG file
+ 86%|████████▋ | 2541/2939 [02:40<00:01, 297.15it/s]100%|██████████| 2939/2939 [02:40<00:00, 18.34it/s] 
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-19-18/2023-01-29-19-18-40.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-19-18/2023-01-29-19-18-18.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-20-19/2023-01-29-20-20-23.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-20-19/2023-01-29-20-20-04.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-20-19/2023-01-29-20-20-14.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_3/2023-01-29-20-25/2023-01-29-20-26-01.jpg (check if corrupted). Skipping...
+Exception: image file is truncated (7 bytes not processed)
+
+Added 22 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
