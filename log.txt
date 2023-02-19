@@ -35304,3 +35304,45 @@ Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_3/2023-01-
 Exception: image file is truncated (7 bytes not processed)
 
 No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
+[main cfb71e3] Table Autocommit
+ 2 files changed, 77 insertions(+), 35 deletions(-)
+To github.com:hectorcarrion/HealNet-Inference.git
+   656eeb7..cfb71e3  main -> main
+Next HealNet run set in 30m
+Already up to date.
+2023-02-18 18:30:01.873139: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-02-18 18:30:05.780438: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/3148 [00:00<?, ?it/s]  1%|          | 35/3148 [00:08<12:35,  4.12it/s]  1%|          | 36/3148 [00:15<26:04,  1.99it/s]  1%|          | 37/3148 [00:22<43:29,  1.19it/s]  1%|          | 38/3148 [00:29<1:05:27,  1.26s/it]  1%|          | 39/3148 [00:35<1:31:50,  1.77s/it]  1%|▏         | 40/3148 [00:42<2:02:17,  2.36s/it]  1%|▏         | 41/3148 [00:49<2:35:05,  2.99s/it]  1%|▏         | 42/3148 [00:56<3:08:11,  3.64s/it]  1%|▏         | 43/3148 [01:03<3:39:57,  4.25s/it]  1%|▏         | 44/3148 [01:10<4:08:34,  4.80s/it]  1%|▏         | 45/3148 [01:16<4:32:54,  5.28s/it]  9%|▉         | 288/3148 [01:23<04:21, 10.92it/s]   9%|▉         | 290/3148 [01:37<08:02,  5.92it/s]  9%|▉         | 291/3148 [01:45<11:12,  4.25it/s]  9%|▉         | 292/3148 [01:52<14:49,  3.21it/s]  9%|▉         | 293/3148 [01:59<19:49,  2.40it/s]  9%|▉         | 294/3148 [02:06<26:44,  1.78it/s]  9%|▉         | 295/3148 [02:14<38:00,  1.25it/s]  9%|▉         | 296/3148 [02:21<50:13,  1.06s/it]  9%|▉         | 297/3148 [02:28<1:06:04,  1.39s/it]  9%|▉         | 298/3148 [02:34<1:25:32,  1.80s/it] 13%|█▎        | 398/3148 [02:41<09:50,  4.65it/s]   13%|█▎        | 399/3148 [02:50<14:35,  3.14it/s] 13%|█▎        | 400/3148 [02:56<19:59,  2.29it/s] 13%|█▎        | 401/3148 [03:03<27:24,  1.67it/s] 13%|█▎        | 402/3148 [03:10<37:53,  1.21it/s] 13%|█▎        | 403/3148 [03:19<55:04,  1.20s/it] 13%|█▎        | 404/3148 [03:26<1:11:29,  1.56s/it] 13%|█▎        | 405/3148 [03:33<1:31:42,  2.01s/it] 13%|█▎        | 406/3148 [03:41<2:00:06,  2.63s/it] 13%|█▎        | 407/3148 [03:48<2:27:45,  3.23s/it] 13%|█▎        | 408/3148 [03:55<2:54:05,  3.81s/it] 16%|█▌        | 508/3148 [04:02<09:59,  4.40it/s]   16%|█▌        | 509/3148 [04:10<14:45,  2.98it/s] 16%|█▌        | 510/3148 [04:17<20:10,  2.18it/s] 16%|█▌        | 511/3148 [04:24<27:36,  1.59it/s] 16%|█▋        | 512/3148 [04:32<40:21,  1.09it/s] 16%|█▋        | 513/3148 [04:41<56:21,  1.28s/it] 16%|█▋        | 514/3148 [04:48<1:13:07,  1.67s/it] 16%|█▋        | 515/3148 [04:55<1:32:29,  2.11s/it] 16%|█▋        | 516/3148 [05:02<1:55:15,  2.63s/it] 16%|█▋        | 517/3148 [05:10<2:29:29,  3.41s/it] 16%|█▋        | 518/3148 [05:17<2:53:46,  3.96s/it] 21%|██▏       | 669/3148 [05:24<06:24,  6.45it/s]   21%|██▏       | 670/3148 [05:31<09:05,  4.55it/s] 21%|██▏       | 671/3148 [05:38<12:34,  3.28it/s] 21%|██▏       | 672/3148 [05:46<18:28,  2.23it/s] 21%|██▏       | 673/3148 [05:53<25:06,  1.64it/s] 21%|██▏       | 674/3148 [06:01<36:03,  1.14it/s] 21%|██▏       | 675/3148 [06:08<47:47,  1.16s/it] 21%|██▏       | 676/3148 [06:15<1:02:29,  1.52s/it] 22%|██▏       | 677/3148 [06:25<1:31:35,  2.22s/it] 22%|██▏       | 678/3148 [06:32<1:51:41,  2.71s/it] 22%|██▏       | 679/3148 [06:39<2:14:01,  3.26s/it] 25%|██▌       | 795/3148 [06:46<07:50,  5.00it/s]   25%|██▌       | 796/3148 [06:55<11:53,  3.29it/s] 25%|██▌       | 797/3148 [07:02<16:06,  2.43it/s] 25%|██▌       | 798/3148 [07:08<21:50,  1.79it/s] 25%|██▌       | 799/3148 [07:15<29:34,  1.32it/s] 25%|██▌       | 800/3148 [07:24<42:50,  1.09s/it] 25%|██▌       | 801/3148 [07:31<56:18,  1.44s/it] 25%|██▌       | 802/3148 [07:38<1:12:36,  1.86s/it] 26%|██▌       | 803/3148 [07:50<1:51:36,  2.86s/it] 26%|██▌       | 804/3148 [07:57<2:10:58,  3.35s/it] 26%|██▌       | 805/3148 [08:04<2:31:22,  3.88s/it] 36%|███▌      | 1134/3148 [08:04<01:49, 18.34it/s]  47%|████▋     | 1467/3148 [08:04<00:38, 44.15it/s] 58%|█████▊    | 1813/3148 [08:04<00:16, 81.76it/s] 69%|██████▊   | 2163/3148 [08:04<00:07, 134.68it/s]Premature end of JPEG file
+ 78%|███████▊  | 2459/3148 [08:05<00:03, 173.45it/s] 89%|████████▉ | 2815/3148 [08:05<00:01, 263.69it/s]100%|██████████| 3148/3148 [08:05<00:00,  6.49it/s] 
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-19-18/2023-01-29-19-18-40.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-19-18/2023-01-29-19-18-18.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-20-19/2023-01-29-20-20-23.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-20-19/2023-01-29-20-20-04.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_1/2023-01-29-20-19/2023-01-29-20-20-14.jpg (check if corrupted). Skipping...
+Exception: OpenCV(4.7.0) /Users/runner/work/opencv-python/opencv-python/opencv/modules/imgproc/src/color.cpp:182: error: (-215:Assertion failed) !_src.empty() in function 'cvtColor'
+
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_8/Pi_4/Wound_3/2023-01-29-20-25/2023-01-29-20-26-01.jpg (check if corrupted). Skipping...
+Exception: image file is truncated (7 bytes not processed)
+
+Added 66 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
