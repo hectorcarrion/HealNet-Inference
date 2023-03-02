@@ -2693,3 +2693,52 @@ Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_10/Pi_4/Wound_C/2023-03
 Exception: division by zero
 
 No new images found in /Users/betr/Desktop/Porcine_Exp_Davis
+[main a63a6d6] Table Autocommit
+ 1 file changed, 47 insertions(+)
+ssh: connect to host github.com port 22: Operation timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Next HealNet run set in 30m
+ssh: connect to host github.com port 22: Operation timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+2023-03-01 22:01:15.452160: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-03-01 22:01:21.755321: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting ImageProjectiveTransformV3 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting RngReadAndSkip cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting Bitcast cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformFullIntV2 cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomGetKeyCounter cause there is no registered converter for this op.
+WARNING:tensorflow:Using a while_loop for converting StatelessRandomUniformV2 cause there is no registered converter for this op.
+  0%|          | 0/1367 [00:00<?, ?it/s]  4%|▍         | 54/1367 [00:04<01:58, 11.08it/s] 12%|█▏        | 169/1367 [00:09<01:06, 18.06it/s] 16%|█▌        | 214/1367 [00:14<01:19, 14.47it/s] 18%|█▊        | 247/1367 [00:19<01:37, 11.48it/s]Premature end of JPEG file
+ 19%|█▉        | 261/1367 [00:20<01:31, 12.06it/s]Premature end of JPEG file
+ 29%|██▉       | 398/1367 [00:20<00:32, 29.56it/s] 63%|██████▎   | 864/1367 [00:20<00:04, 118.73it/s] 89%|████████▊ | 1211/1367 [00:27<00:02, 74.94it/s] 89%|████████▊ | 1211/1367 [00:40<00:02, 74.94it/s] 89%|████████▉ | 1214/1367 [00:44<00:06, 23.15it/s] 89%|████████▉ | 1215/1367 [00:49<00:08, 17.66it/s] 89%|████████▉ | 1215/1367 [01:00<00:08, 17.66it/s] 89%|████████▉ | 1217/1367 [01:00<00:14, 10.10it/s] 89%|████████▉ | 1218/1367 [01:05<00:18,  8.09it/s] 93%|█████████▎| 1270/1367 [01:20<00:16,  5.88it/s] 94%|█████████▍| 1288/1367 [01:27<00:15,  5.08it/s] 94%|█████████▍| 1288/1367 [01:41<00:15,  5.08it/s] 94%|█████████▍| 1290/1367 [01:42<00:25,  2.97it/s] 94%|█████████▍| 1291/1367 [01:47<00:29,  2.54it/s] 99%|█████████▉| 1357/1367 [01:52<00:02,  4.56it/s] 99%|█████████▉| 1357/1367 [02:11<00:02,  4.56it/s]100%|█████████▉| 1361/1367 [02:16<00:02,  2.08it/s]100%|█████████▉| 1362/1367 [02:22<00:02,  1.77it/s]100%|█████████▉| 1362/1367 [02:32<00:02,  1.77it/s]100%|█████████▉| 1365/1367 [02:37<00:01,  1.17it/s]100%|█████████▉| 1366/1367 [02:42<00:00,  1.01it/s]100%|██████████| 1367/1367 [02:48<00:00,  8.13it/s]
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_10/Pi_6/Wound_7/2023-03-01-00-37/2023-03-01-00-37-03.jpg (check if corrupted). Skipping...
+Exception: division by zero
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_10/Pi_6/Wound_7/2023-03-01-04-58/2023-03-01-04-58-48.jpg (check if corrupted). Skipping...
+Exception: division by zero
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_10/Pi_6/Wound_7/2023-02-28-11-31/2023-02-28-11-31-48.jpg (check if corrupted). Skipping...
+Exception: division by zero
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_10/Pi_6/Wound_7/2023-02-28-18-04/2023-02-28-18-04-27.jpg (check if corrupted). Skipping...
+Exception: division by zero
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_10/Pi_6/Wound_6/2023-03-01-11-49/2023-03-01-11-50-43.jpg (check if corrupted). Skipping...
+Exception: image file is truncated (3 bytes not processed)
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_10/Pi_6/Wound_6/2023-03-01-12-10/2023-03-01-12-10-57.jpg (check if corrupted). Skipping...
+Exception: image file is truncated (9 bytes not processed)
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_10/Pi_4/Wound_C/2023-03-01-14-11/2023-03-01-14-11-46.jpg (check if corrupted). Skipping...
+Exception: division by zero
+Unable to open /Users/betr/Desktop/Porcine_Exp_Davis/Exp_10/Pi_4/Wound_B/2023-03-01-21-57/2023-03-01-21-57-53.jpg (check if corrupted). Skipping...
+Exception: division by zero
+
+Added 24 new predictions to /Users/betr/Desktop/HealNet-Inference/prob_table.csv
