@@ -11,6 +11,7 @@ from pathlib import Path
 from skimage import color as skcolor
 from skimage import filters as skfilters
 import cv2
+import gc
 
 # Constants
 avg_dv = np.array([108.16076384,  61.49104917,  55.44175686])
@@ -243,12 +244,13 @@ for image in tqdm(image_paths):
             time = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
             prob_table.loc[len(prob_table)] = [str(image), time, blur, len(preds),
                                                hemo, infl, prol, matu]
+            
+            prob_table.to_csv(prob_table_path, index=False)
             processed_ctr += 1
+            gc.collect()
         except Exception as e:
             print(f"Unable to open {image} (check if corrupted). Skipping...")
             print(f"Exception: {e}")
-
-prob_table.to_csv(prob_table_path, index=False)
 
 if processed_ctr:
     print()
