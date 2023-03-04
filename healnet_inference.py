@@ -246,6 +246,7 @@ for image in tqdm(image_paths):
                                                hemo, infl, prol, matu]
             
             prob_table.to_csv(prob_table_path, index=False)
+            prob_table = pd.read_csv(prob_table_path)
             processed_ctr += 1
             gc.collect()
         except Exception as e:
