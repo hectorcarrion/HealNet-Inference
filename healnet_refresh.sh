@@ -1,5 +1,6 @@
 #!/bin/sh
 
+date
 USER=$(id -un)
 cd /Users/$USER/Desktop/HealNet-Inference
 git pull
